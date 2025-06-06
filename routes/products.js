@@ -30,6 +30,7 @@ router.get('/product/:id', async (req, res) => {
        .from('products')
        .select('*')
        .eq('id', id)
+       .eq('isActive', true)
 
     if (error) return res.status(400).json({ error: error.message })
 
