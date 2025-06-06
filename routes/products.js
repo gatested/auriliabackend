@@ -22,7 +22,7 @@ router.get('/products/isprincipal', async (req, res) => {
 
     res.status(200).json(data)  
 })
-router.get('/products/:id', async (req, res) => {
+router.get('/product/:id', async (req, res) => {
     const { id } = req.params
     const { data, error } = await supabase
        .from('products')
